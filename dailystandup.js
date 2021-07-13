@@ -9,11 +9,25 @@
 // console.log(repeats([5, 17, 18, 11, 13, 18, 11, 13]),22);
 // console.log(repeats([5, 10, 19, 13, 10, 13]),24);
 
+// ************SOLUTION************
 const repeats = arr => arr.filter((num) => arr.indexOf(num) ===  arr.lastIndexOf(num)).reduce((a, b) => a + b, 0)
-console.log(repeats([4,5,7,5,4,8]),15);
-console.log(repeats([9, 10, 19, 13, 19, 13]),19);
-console.log(repeats([16, 0, 11, 4, 8, 16, 0, 11]),12);
-console.log(repeats([5, 17, 18, 11, 13, 18, 11, 13]),22);
-console.log(repeats([5, 10, 19, 13, 10, 13]),24);
-console.log(repeats([-1, 4, 3, 4, 5]))
-console.log(repeats([-1, 4, 4, -1, 5]))
+// console.log(repeats([4,5,7,5,4,8]),15);
+// console.log(repeats([9, 10, 19, 13, 19, 13]),19);
+// console.log(repeats([16, 0, 11, 4, 8, 16, 0, 11]),12);
+// console.log(repeats([5, 17, 18, 11, 13, 18, 11, 13]),22);
+// console.log(repeats([5, 10, 19, 13, 10, 13]),24);
+// console.log(repeats([-1, 4, 3, 4, 5]))
+// console.log(repeats([-1, 4, 4, -1, 5]))
+
+// Tuesday 7/13
+// Your task is to remove all consecutive duplicate words from a string, leaving only first words entries. For example:
+
+// "alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta"
+
+// --> "alpha beta gamma delta alpha beta gamma delta"
+
+// ************SOLUTION************
+function removeConsecutiveDuplicates(str){
+    let arr = str.split(' ')
+    return arr.filter((word, idx) => word !== arr[idx + 1]).join(' ')
+  }
