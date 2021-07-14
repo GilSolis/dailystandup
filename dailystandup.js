@@ -39,6 +39,14 @@ function removeConsecutiveDuplicates(str){
 // Wednesday 7/14
 
 // Write a function that when given a URL as a string, parses out just the domain name and returns it as a string. For example:
+// ************SOLUTION************
+function urlReplace(str){
+    str = str.replace('http://', '')
+    str = str.replace('https://', '')
+    str = str.replace('www.', '')
+    str = str.split('.')
+    return str[0]
+  }
 
 // domainName("http://github.com/carbonfive/raygun") == "github" 
 // domainName("http://www.zombie-bites.com") == "zombie-bites"
