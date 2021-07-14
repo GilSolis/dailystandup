@@ -31,3 +31,15 @@ function removeConsecutiveDuplicates(str){
     let arr = str.split(' ')
     return arr.filter((word, idx) => word !== arr[idx + 1]).join(' ')
   }
+
+//   console.log(noConsecutiveDupes("alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta"))
+//   console.log(noConsecutiveDupes('dog cat cat dog giraffe bird bird'))
+//   console.log(noConsecutiveDupes('spoon spoon fork fork knife spoon fork knife knife taco'))
+
+// Wednesday 7/14
+
+// Write a function that when given a URL as a string, parses out just the domain name and returns it as a string. For example:
+
+// domainName("http://github.com/carbonfive/raygun") == "github" 
+// domainName("http://www.zombie-bites.com") == "zombie-bites"
+// domainName("https://www.cnet.com") == "cnet"
