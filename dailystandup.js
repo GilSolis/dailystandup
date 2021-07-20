@@ -121,3 +121,37 @@ function removeSmallest(arr){
 // console.log(removeSmallest([1,2,3,4,5])) //[2,3,4,5]
 // console.log(removeSmallest([5,3,2,1,4])) //[5,3,2,4]
 // console.log(removeSmallest([2,2,1,2,1])) //[2,2,2,1]
+
+// 7/19
+// Given a string of words, you need to find the highest scoring word.
+
+// Each letter of a word scores points according to its position in the alphabet: a = 1, b = 2, c = 3 etc.
+
+// You need to return the highest scoring word as a string.
+
+// If two words score the same, return the word that appears earliest in the original string.
+
+// All letters will be lowercase and all inputs will be valid.
+
+// Test.assertEquals(high('man i need a taxi up to ubud'), 'taxi');
+// Test.assertEquals(high('what time are we climbing up the volcano'), 'volcano'); 
+// Test.assertEquals(high('take me to semynak'), 'semynak'); 
+// *********solution************
+
+function high(x){
+  let alphabet = '0abcdefghijklmnopqrstuvwxyz'
+  const score = word => word.split('').reduce((acc, current) => acc + alphabet.indexOf(current), 0)
+
+  let highestScore = 0
+  let highestScoringWord = ''
+
+  x.split(' ').forEach(word => {
+    if (highestScore < score(word)){
+        highestScore = score(word)
+        highestScoringWord = word
+      }
+    })
+  return highestScoringWord
+}
+
+console.log(high('what time are we climbing up the volcano'), 'volcano')
