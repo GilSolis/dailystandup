@@ -224,8 +224,26 @@ function solve(arr){
 // Test.assertEquals(switcher(['24', '12', '23', '22', '4', '26', '9', '8']), 'codewars');
 // Test.assertEquals(switcher(['25','7','8','4','14','23','8','25','23','29','16','16','4']), 'btswmdsbd kkw'); 
 // Test.assertEquals(switcher(['4', '24']), 'wc'); 
+
 // ********solution*********
 function switcher(x){
   const letters = ' zyxwvutsrqponmlkjihgfedcba!? '
   return x.reduce((acc, cv) => acc += letters.charAt(cv), '')
+  }
+
+
+//   7/23
+//   Given a string of words (x), you need to return an array of the words, sorted alphabetically by the final character in each.
+
+// If two words have the same last letter, they returned array should show them in the order they appeared in the given string.
+
+// All inputs will be valid.
+
+// Test.assertSimilar(last('man i need a taxi up to ubud'), ['a', 'need', 'ubud', 'i', 'taxi', 'man', 'to', 'up']);
+// Test.assertSimilar(last('what time are we climbing up the volcano'), ['time', 'are', 'we', 'the', 'climbing', 'volcano', 'up', 'what']); 
+// Test.assertSimilar(last('take me to semynak'), ['take', 'me', 'semynak', 'to']); 
+
+// ***********solution***********
+function last(x){
+  return x.split(' ').sort((a,b) => a.slice(-1) > b.slice(-1))
   }
