@@ -227,7 +227,5 @@ function solve(arr){
 // ********solution*********
 function switcher(x){
   const letters = ' zyxwvutsrqponmlkjihgfedcba!? '
-  //let str = ''
   return x.reduce((acc, cv) => acc += letters.charAt(cv), '')
-  //
   }
