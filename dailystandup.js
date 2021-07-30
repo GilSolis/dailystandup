@@ -345,7 +345,7 @@ var capitals = function (word) {
 // Test.assertDeepEquals(dup(["kelless","keenness"]), ['keles','kenes']);
 // Test.assertDeepEquals(dup(["Woolloomooloo","flooddoorroommoonlighters","chuchchi"]), ['Wolomolo','flodoromonlighters','chuchchi']);
 
-*******solution*******
+// *******solution*******
 
 function dup(arr) {
   return arr.map((word) => word.split('').filter((letter, i, array) => letter !== array[i-1]).join(''))
