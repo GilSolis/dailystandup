@@ -313,3 +313,21 @@ function twoOldestAges(ages){
 
 // Example
 // Test.assertSimilar( capitals('CodEWaRs'), [0,3,4,6] );
+
+// ******solution******
+
+var capitals = function (word) {
+	// let caps = []
+  // for(let i = 0; i < word.length; i++){
+  //   if(word[i] === word[i].toUpperCase()){
+  //     caps.push(i)
+  //   }
+  // }
+  // return caps
+
+  return word.split('').map((element, idx) => element === element.toUpperCase() ? idx : -1).filter(element => element !== -1)
+  
+  // return word.split('').reduce((acc, cv, idx) => cv === cv.toUpperCase() ? acc.concat(idx) : acc, [])
+
+};
+
