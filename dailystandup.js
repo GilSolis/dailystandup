@@ -365,3 +365,21 @@ function dup(arr) {
 // Examples
 // "John Doe hs seven red pples under his bsket"          =>  0  ; missing: "a"
 // "Bb Smith sent us six neatly arranged range bicycles"  =>  3  ; missing: "o"
+
+// ******solution******
+
+function missingVowel(str) {
+  let vowels = ['a','e','i','o','u']
+
+ let filtered = vowels.map(char => str.includes(char))
+return filtered.indexOf(false)
+
+  // for (let i = 0; i < str.length; i++) {
+  //   if (str.indexOf("a") === -1) return 0
+  //   if (str.indexOf("e") === -1) return 1
+  //   if (str.indexOf("i") === -1) return 2
+  //   if (str.indexOf("o") === -1) return 3
+  //   if (str.indexOf("u") === -1) return 4
+
+  // }
+}
