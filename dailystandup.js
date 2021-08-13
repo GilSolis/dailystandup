@@ -401,3 +401,20 @@ function averageLength(arr){
 
   return arr.map(element => element[0].repeat(num))
 }
+
+// 8/12
+// Given a string of words or phrases, count the number of vowels.
+
+// No Regex! Unless that is your brute force...
+
+function vowels(str){
+  let count = 0;
+  let vowels = 'aeiou'
+  
+  for ( let char of str){
+    if (vowels.includes(char)){
+      count++
+    }
+  }
+  return count
+  }
