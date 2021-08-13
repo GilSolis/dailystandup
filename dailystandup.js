@@ -407,6 +407,8 @@ function averageLength(arr){
 
 // No Regex! Unless that is your brute force...
 
+******solution*******
+
 function vowels(str){
   let count = 0;
   let vowels = 'aeiou'
@@ -418,3 +420,18 @@ function vowels(str){
   }
   return count
   }
+
+//   8/13
+//   Given an array of items, reverse the order.
+
+// No reverse method! Unless that is your brute force first...
+
+function reverseArr(arr){
+let newArr = []
+for(let element of arr){
+  newArr.unshift(element)
+}
+
+return newArr
+
+}
