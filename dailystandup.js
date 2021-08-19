@@ -475,9 +475,35 @@ function ransomNote(str, mag) {
   for (let inputWord of strArr) {
     if (magazineWords[inputWord]) {
       magazineWords[inputWord] = magazineWords[inputWord] - 1
-    } else {
+    } else { 
       return false
     }
   }
   return true;
+}
+
+8/19
+// You are given an array prices where prices[i] is the price of a given stock on the ith day.
+
+// You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.
+
+// Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
+
+
+// *******solution*******
+
+function findProfit(arr)  {
+  let min = 0, max = 0;
+  let profit = 0
+  for (let i = arr.length-1; i >= 0; i--) {
+    if  (arr[i] < min) {
+      min = arr[i]
+      profit = Math.max(profit, max - min)
+    }
+    if (arr[i] > max) {
+      max = arr[i];
+      min = arr[i];
+    }
+  }
+  return profit
 }
