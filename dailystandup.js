@@ -545,3 +545,38 @@ function majorityNum(arr){
 
 // Input: nums = [1,2,3]
 // Output: 0
+
+// function goodPairs(arr) {
+//   let count = 0
+//   arr.forEach((el, i, arr) => {
+//     for(let j=i+1; j<arr.length; j++){
+//       if(el === arr[j]){
+//         count++
+//       }
+//     }
+//   })
+//   return count
+// }
+
+function factorial(n) {
+  let mul = 1
+  for(let i=1; i<=n; i++){
+    mul *= i
+  }
+  return mul
+}
+
+function goodPairs(arr) {
+  const pairsObj = {}
+  for (let num of arr) {
+    pairsObj[num] =  pairsObj[num] + 1 || 1
+  }
+
+  let count = 0
+  for(let num in pairsObj){
+    if(pairsObj[num] > 1){
+      count += factorial(pairsObj[num]) / (2*factorial(pairsObj[num] - 2))
+    }
+  }
+  return count
+}
