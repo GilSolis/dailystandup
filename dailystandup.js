@@ -598,3 +598,15 @@ function goodPairs(arr) {
 // Input: nums = [1,1,1,3,3,4,3,2,4,2]
 // Output: true
 
+function dupsOrNah(arr){
+  let obj = {}
+  for (let i = 0; i<arr.length; i++){
+    obj[arr[i]] = obj[arr[i]] + 1 || 1
+
+    if(obj[arr[i]] > 1) {
+      return true
+    }
+  }
+
+  return false
+}
