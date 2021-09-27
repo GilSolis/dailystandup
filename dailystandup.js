@@ -724,7 +724,6 @@ function dupsOrNah(arr){
 // Test.assertEquals(mygcd(8,9),1)
 // Test.assertEquals(mygcd(1,1),1)
 
-
 // 9/8
 // Queues are linear collections of objects that can be inserted and removed in a FIFO (first in, first out) manner.
 
